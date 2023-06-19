@@ -1,6 +1,6 @@
 # Curso Egg Full Stack Latam
-### Java
-> principios Básicos  
+### JAVA
+> Principios básicos de JAVA  
 > POO (programación orientada a objetos)  
 > Colecciones  
 > Relaciones  
