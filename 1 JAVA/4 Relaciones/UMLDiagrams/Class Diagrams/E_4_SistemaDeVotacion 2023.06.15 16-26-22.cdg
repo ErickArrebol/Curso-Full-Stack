@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="E_4_SistemaDeVotacion">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="E_4_SistemaDeVotacion" visibility="public" xPosition="51.0" yPosition="85.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="cantidadVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="DNI"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getDNI" returnType="String" visibility="public"/>
+        <Method name="getCantidadVotos" returnType="int" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="String" name="DNI"/>
+        </Method>
+        <Method name="setCantidadVotos" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadVotos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="E_4_SistemaDeVotacion" visibility="public" xPosition="117.0" yPosition="485.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="E_4_SistemaDeVotacion" visibility="public" xPosition="524.0" yPosition="354.0">
+      <Fields>
+        <Field name="listaDeAlumnos" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+        <Field name="listaDeVotacion" type="List&lt;Voto&gt;" visibility="private"/>
+        <Field name="listaDeNombre" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="listaDNI" type="ArrayList&lt;String&gt;" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListaDeAlumnos" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="getListaDeVotacion" returnType="List&lt;Voto&gt;" visibility="public"/>
+        <Method name="getListaDeNombre" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="getListaDNI" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="getLeer" returnType="Scanner" visibility="public"/>
+        <Method name="listaAleatoriaNombre" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="listaAleatoriaDNI" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+        <Method name="creacionDeAlumnos" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="imprimirAlumnos" returnType="void" visibility="public"/>
+        <Method name="votacion" returnType="List&lt;Voto&gt;" visibility="public"/>
+        <Method name="imprimirVotaciones" returnType="void" visibility="public"/>
+        <Method name="listaDeAlumnosPorVotos" returnType="void" visibility="public"/>
+        <Method name="crarFacilitadores" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="E_4_SistemaDeVotacion" visibility="public" xPosition="537.0" yPosition="-11.0">
+      <Fields>
+        <Field name="votante" type="Alumno" visibility="private"/>
+        <Field name="listaDeVotacion" type="List&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Alumno" name="votante"/>
+          <Argument type="List&lt;Alumno&gt;" name="listaDeVotacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVotante" returnType="Alumno" visibility="public"/>
+        <Method name="getListaQueVoto" returnType="List&lt;Alumno&gt;" visibility="public"/>
+        <Method name="setVotante" returnType="void" visibility="public">
+          <Argument type="Alumno" name="votante"/>
+        </Method>
+        <Method name="setListaQueVoto" returnType="void" visibility="public">
+          <Argument type="List&lt;Alumno&gt;" name="listaDeVotacion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="votante" source="E_4_SistemaDeVotacion.Voto" target="E_4_SistemaDeVotacion.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaDeVotacion" source="E_4_SistemaDeVotacion.Voto" target="E_4_SistemaDeVotacion.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Alumno&gt;"/>
+    <UseRelation source="E_4_SistemaDeVotacion.Voto" target="E_4_SistemaDeVotacion.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="E_4_SistemaDeVotacion.Simulador" target="E_4_SistemaDeVotacion.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="E_4_SistemaDeVotacion.Simulador" target="E_4_SistemaDeVotacion.Voto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaDeAlumnos" source="E_4_SistemaDeVotacion.Simulador" target="E_4_SistemaDeVotacion.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <HasRelation name="listaDeVotacion" source="E_4_SistemaDeVotacion.Simulador" target="E_4_SistemaDeVotacion.Voto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Voto&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="E_2_SalaDeCine">
+  <ClassDiagramComponents>
+    <Class name="Cine" package="E_2_SalaDeCine" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="numeroSalas" type="int" visibility="private"/>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="duracion" type="double" visibility="private"/>
+        <Field name="edadMinima" type="int" visibility="private"/>
+        <Field name="director" type="String" visibility="private"/>
+        <Field name="cliente" type="ArrayList&lt;Espectador&gt;" visibility="private"/>
+        <Field name="sala" type="String[][]" visibility="private"/>
+        <Field name="costoEntras" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="numeroSalas"/>
+          <Argument type="String" name="titulo"/>
+          <Argument type="double" name="duracion"/>
+          <Argument type="int" name="edadMinima"/>
+          <Argument type="String" name="director"/>
+          <Argument type="ArrayList&lt;Espectador&gt;" name="cliente"/>
+          <Argument type="String[][]" name="sala"/>
+          <Argument type="double" name="costoEntras"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroSalas" returnType="int" visibility="public"/>
+        <Method name="getTitulo" returnType="String" visibility="public"/>
+        <Method name="getDuracion" returnType="double" visibility="public"/>
+        <Method name="getEdadMinima" returnType="int" visibility="public"/>
+        <Method name="getDirector" returnType="String" visibility="public"/>
+        <Method name="getCliente" returnType="ArrayList&lt;Espectador&gt;" visibility="public"/>
+        <Method name="getSala" returnType="String[][]" visibility="public"/>
+        <Method name="getCostoEntras" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="crearNombrePeli" returnType="String[]" visibility="public"/>
+        <Method name="crearDureacionPeli" returnType="double[]" visibility="public"/>
+        <Method name="crearEdadMinimaPeli" returnType="int[]" visibility="public"/>
+        <Method name="crearDirectorPeli" returnType="String[]" visibility="public"/>
+        <Method name="costoEntradas" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Espectador" package="E_2_SalaDeCine" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="cliente" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="asiento" type="String" visibility="private"/>
+        <Field name="dinero" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="cliente"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="asiento"/>
+          <Argument type="double" name="dinero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCliente" returnType="String" visibility="public"/>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="getAsiento" returnType="String" visibility="public"/>
+        <Method name="getDinero" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="creaNombreCliente" returnType="String" visibility="public"/>
+        <Method name="crearEdadCliente" returnType="int" visibility="public"/>
+        <Method name="crearDineroCliente" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="E_2_SalaDeCine" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="E_2_SalaDeCine.Cine" target="E_2_SalaDeCine.Espectador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="E_2_SalaDeCine.Cine" target="E_2_SalaDeCine.Espectador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Espectador&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

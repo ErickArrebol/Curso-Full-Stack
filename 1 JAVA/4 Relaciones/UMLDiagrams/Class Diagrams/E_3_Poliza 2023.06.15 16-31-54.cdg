@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="E_3_Poliza">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="E_3_Poliza" visibility="public" xPosition="848.0" yPosition="41.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cuota" package="E_3_Poliza" visibility="public" xPosition="848.0" yPosition="180.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Poliza" package="E_3_Poliza" visibility="public" xPosition="848.0" yPosition="319.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Simulador" package="E_3_Poliza" visibility="public" xPosition="45.0" yPosition="143.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UnionDatos" package="E_3_Poliza" visibility="public" xPosition="350.0" yPosition="131.0">
+      <Fields>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="cuota" type="Cuota" visibility="private"/>
+        <Field name="poliza" type="Poliza" visibility="private"/>
+        <Field name="vehiculo" type="Vehiculo" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Vehiculo" package="E_3_Poliza" visibility="public" xPosition="835.0" yPosition="495.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cuota" source="E_3_Poliza.UnionDatos" target="E_3_Poliza.Cuota" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="poliza" source="E_3_Poliza.UnionDatos" target="E_3_Poliza.Poliza" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="E_3_Poliza.UnionDatos" target="E_3_Poliza.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vehiculo" source="E_3_Poliza.UnionDatos" target="E_3_Poliza.Vehiculo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

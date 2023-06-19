@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="E_2_Ruleta_De_Agua_Rusa">
+  <ClassDiagramComponents>
+    <Class name="Juego" package="E_2_Ruleta_De_Agua_Rusa" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="listaJugadores" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="pistola" type="RevolverDeAgua" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarJuego" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="listaJugadores"/>
+          <Argument type="RevolverDeAgua" name="pistola"/>
+        </Method>
+        <Method name="ronda" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="E_2_Ruleta_De_Agua_Rusa" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="disparo" returnType="boolean" visibility="public">
+          <Argument type="RevolverDeAgua" name="turno"/>
+        </Method>
+        <Method name="estaMojado" returnType="boolean" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="E_2_Ruleta_De_Agua_Rusa" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RevolverDeAgua" package="E_2_Ruleta_De_Agua_Rusa" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionAgua" type="int" visibility="private"/>
+        <Field name="numeroJugadores" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cantidadDeJugadores" returnType="int" visibility="public"/>
+        <Method name="llenarRevolver" returnType="void" visibility="public"/>
+        <Method name="mojar" returnType="boolean" visibility="public"/>
+        <Method name="siguienteChorro" returnType="void" visibility="public"/>
+        <Method name="getNumeroJugadores" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="segundo" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="pistola" source="E_2_Ruleta_De_Agua_Rusa.Juego" target="E_2_Ruleta_De_Agua_Rusa.RevolverDeAgua" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="E_2_Ruleta_De_Agua_Rusa.Jugador" target="E_2_Ruleta_De_Agua_Rusa.RevolverDeAgua" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="E_2_Ruleta_De_Agua_Rusa.Juego" target="E_2_Ruleta_De_Agua_Rusa.RevolverDeAgua" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaJugadores" source="E_2_Ruleta_De_Agua_Rusa.Juego" target="E_2_Ruleta_De_Agua_Rusa.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Jugador&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
