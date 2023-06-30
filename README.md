@@ -8,4 +8,4 @@
 > Excepciones
 
 ### MySQL
-> Bases de Datos MySQL
+> Bases de Datos MySQL (Consultas)
