@@ -8,4 +8,6 @@
 > Excepciones
 
 ### MySQL
-> Bases de Datos MySQL (Consultas)
+> Fundaamentos
+> Creacion de BD
+> Consultas
