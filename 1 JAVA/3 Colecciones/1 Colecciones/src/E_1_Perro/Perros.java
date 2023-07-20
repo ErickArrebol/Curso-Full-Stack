@@ -1,4 +1,4 @@
-package E_1_Perros;
+package E_1_Perro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,4 +18,5 @@ public class Perros {
     public void setNombreMascota(List<String> nombreMascota) {
         this.nombreMascota = nombreMascota;
     }
+    //////////////////////////////////////////////////////////////
 }

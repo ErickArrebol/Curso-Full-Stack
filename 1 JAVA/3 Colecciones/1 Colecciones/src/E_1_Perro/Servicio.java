@@ -1,4 +1,4 @@
-package E_1_Perros;
+package E_1_Perro;
 
 import java.util.ArrayList;
 import java.util.Scanner;
