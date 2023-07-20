@@ -1,14 +1,15 @@
-package ArmaduraIonMan;
+package ArmaduraIROMAN;
 
-public class Consola extends DispositivosArmadura {
+public class Sintetizador extends DispositivosArmadura{
 
-    public Consola(float consumoEnergia, String nombre) {
+    public Sintetizador(float consumoEnergia, String nombre) {
         super(consumoEnergia, nombre);
     }
 
-    public float usar(int intensidad) {
-        return  (this.getConsumoEnergia() * intensidad);
+    public int usar(int intensidad) {
+        return (int) (this.getConsumoEnergia() * intensidad );
     }
+    
 
     public void estado() {
         System.out.println(this.danado ? "Dañado" :"Funcionando");

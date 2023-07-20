@@ -1,4 +1,4 @@
-package ArmaduraIonMan;
+package ArmaduraIROMAN;
 
 public class Generador {
     

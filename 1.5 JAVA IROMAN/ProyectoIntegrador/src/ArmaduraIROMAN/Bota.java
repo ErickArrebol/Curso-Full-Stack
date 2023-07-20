@@ -1,8 +1,8 @@
-package ArmaduraIonMan;
+package ArmaduraIROMAN;
 
-public class Guante extends DispositivosArmadura {
+public class Bota extends DispositivosArmadura{
 
-    public Guante(float consumoEnergia, String nombre) {
+    public Bota(float consumoEnergia, String nombre) {
         super(consumoEnergia, nombre);
     }
 
@@ -13,12 +13,13 @@ public class Guante extends DispositivosArmadura {
     public void setDanado(boolean danado) {
         this.danado = danado;
     }
+
     
-    public double usar( double intensidad, double tiempo) {
-        return (this.getConsumoEnergia() * intensidad * tiempo);
+    public double usar(double intensidad, double tiempo) {
+        return  (this.getConsumoEnergia() * intensidad * tiempo);
     }
-    
-    public void estado() {
+
+   public void estado() {
         System.out.println(this.isDanado() ? "Dañado" : "Funcionado");//terranario
     }
 }

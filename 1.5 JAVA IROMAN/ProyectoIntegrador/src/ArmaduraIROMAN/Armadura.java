@@ -1,4 +1,4 @@
-package ArmaduraIonMan;
+package ArmaduraIROMAN;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -20,7 +20,6 @@ public class Armadura {
     private Sintetizador sintetizador;
     private ArrayList<Radar> radar;
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public Armadura(String nombre, String colorPrimario, String colorSecundario, int nivelResistencia, int nivelSalud) {
         this.nombre = nombre;
         this.colorPrimario = colorPrimario;
