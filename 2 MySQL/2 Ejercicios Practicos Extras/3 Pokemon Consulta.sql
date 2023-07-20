@@ -11,15 +11,19 @@ SELECT * FROM pokemon WHERE peso > 10;
 
 -- 3. Mostrar los pokemon de tipo agua.
 SELECT * FROM pokemon WHERE numero_pokedex IN (SELECT numero_pokedex FROM pokemon_tipo WHERE id_tipo =(SELECT id_tipo FROM tipo WHERE nombre like'Agua'));
+SELECT p.*, t.nombre  FROM pokemon p INNER JOIN pokemon_tipo pt INNER JOIN tipo t ON p.numero_pokedex = pt.numero_pokedex AND pt.id_tipo = t.id_tipo WHERE t.nombre = ("agua") ;
 
 -- 4. Mostrar los pokemon de tipo agua, fuego o tierra ordenados por tipo.
+SELECT * FROM pokemon WHERE numero_pokedex IN (SELECT numero_pokedex FROM pokemon_tipo WHERE id_tipo IN (SELECT id_tipo FROM tipo WHERE nombre IN ("agua", "fuego", "tierra")));
 SELECT p.nombre, t.nombre  FROM pokemon p INNER JOIN pokemon_tipo pt INNER JOIN tipo t ON p.numero_pokedex = pt.numero_pokedex AND pt.id_tipo = t.id_tipo WHERE t.nombre IN ("agua", "fuego", "tierra") ORDER BY t.nombre;
 
 -- 5. Mostrar los pokemon que son de tipo fuego y volador.
 SELECT p.nombre,t.nombre FROM pokemon p INNER JOIN pokemon_tipo pt INNER JOIN tipo t ON p.numero_pokedex = pt.numero_pokedex AND pt.id_tipo = t.id_tipo WHERE t.nombre IN ( "fuego", "volador") ;
+SELECT * FROM pokemon WHERE numero_pokedex IN (SELECT numero_pokedex FROM pokemon_tipo WHERE id_tipo IN (SELECT id_tipo FROM tipo WHERE nombre IN ("fuego", "volador")));
 
 -- 6. Mostrar los pokemon con una estadística base de ps mayor que 200.
 SELECT * FROM pokemon WHERE numero_pokedex IN (SELECT numero_pokedex FROM estadisticas_base WHERE ps > 200);
+select p.*, eb.ps FROM pokemon p Join estadisticas_base eb ON p.numero_pokedex = eb.numero_pokedex Where ps > 200;
 
 -- 7. Mostrar los datos (nombre, peso, altura) de la prevolución de Arbok.
 SELECT * FROM pokemon WHERE numero_pokedex =(SELECT pokemon_origen FROM evoluciona_de WHERE pokemon_evolucionado =(SELECT numero_pokedex FROM pokemon WHERE nombre LIKE 'Arbok'));
