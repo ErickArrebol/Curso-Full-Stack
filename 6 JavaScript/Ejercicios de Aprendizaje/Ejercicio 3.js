@@ -1,5 +1,5 @@
 /*Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de
-edad se debe mostrar un mensaje indicándolo.*/
+edad se  debe mostrar un mensaje indicándolo.*/
 
 let edad = prompt("Ingresa tu edad:");
 //var edad = 10;

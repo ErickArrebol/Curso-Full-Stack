@@ -1,4 +1,4 @@
-/* Escribir un programa de JavaScript que a través de un formulario calcule el radio de un
+/* Escribir  un programa de JavaScript que a través de un formulario calcule el radio de un
 circulo y lo muestre en el HTML.*/
 const diametroInput = document.getElementById('diametro');// El numero ingresado
 const resultadoLabel = document.getElementById('resultado');

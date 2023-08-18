@@ -5,7 +5,7 @@ radio del círculo lo proporcionará el usuario. */
 const circulo = {
     radio: "",
     cargarDatos: function () {
-        this.radio = prompt("Ingresa el radio del círculo");
+        this.radio =  prompt("Ingresa el radio del círculo");
     }
 }
 

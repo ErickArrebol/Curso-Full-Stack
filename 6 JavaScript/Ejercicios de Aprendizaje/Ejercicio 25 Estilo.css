@@ -1,6 +1,6 @@
-body{
+body {
     background-color: rgba(0, 0, 0, 0.15);
-    background-image: url(fondo\ ejercicio\ 25.jpg);
+    background-image: url(25.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin: 0%;
@@ -31,7 +31,7 @@ h1{
     font-size: 150%;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10% auto; /* Centrar verticalmente y ajustar automáticamente los márgenes horizontales */
-    background-image: url(fondo\ ejercicio\ 25.jpg);
+    background-image: url(25.jpg);
     background-size: 130%;
     color: rgb(255, 255, 255);
     display: inline-block;

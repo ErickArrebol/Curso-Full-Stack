@@ -1,6 +1,6 @@
-/* Estilos para el fondo y margen superior del cuerpo del documento */
+/* Estilos para el  fondo y margen superior del cuerpo del documento */
 body {
-    background-image: url(900258.jpg); /* Establece una imagen de fondo */
+    background-image: url(22.jpg); /* Establece una imagen de fondo */
     background-size: cover; /* Ajusta la imagen de fondo al tamaño del viewport */
     background-attachment: fixed; /* Fija la imagen de fondo mientras se hace scroll */
     background-color: #040000f7; /* Color de fondo con transparencia */

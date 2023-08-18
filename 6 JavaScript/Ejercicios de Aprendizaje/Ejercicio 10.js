@@ -1,4 +1,4 @@
-/*Escribir una función flecha que reciba una palabra y la devuelva al revés. */
+/*Escribir una  función flecha que reciba una palabra y la devuelva al revés. */
 
 // split('') divide la palabra en un array de caracteres individuales.
 // reverse() invierte el orden de los elementos en el array.

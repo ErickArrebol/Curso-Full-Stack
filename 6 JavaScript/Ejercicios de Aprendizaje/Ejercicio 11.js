@@ -1,5 +1,5 @@
 /*Escribir una función que reciba un String y devuelva la palabra más larga.
-String Ejemplo: “Guia de JavaScript”
+String Ejemplo: “Guia  de JavaScript”
 Resultado esperado : “JavaScript” */
 
 const frase = "Guia de JavaScript";
