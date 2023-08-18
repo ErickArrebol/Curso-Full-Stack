@@ -1,0 +1,57 @@
+body{
+    margin: 4%;
+    background-color: rgba(158, 163, 163, 0.127);
+}
+#titulo{
+    color:rgb(27, 173, 125);
+}
+
+.negritas1{
+    color:brown;
+}
+
+.destacado{
+    color:rgb(235, 151, 7);
+}
+
+#subtitulo{
+    color: blue;
+}
+
+a{
+    color: brown;
+}
+
+em{
+    color: blue;
+}
+
+.especial1{
+    color: blueviolet;
+}
+
+.especial{
+    color: rgb(235, 151, 7);
+}
+.tab{
+    color: rgba(2, 137, 2, 0.668);
+}
+
+.t{
+    color: rgb(193, 24, 24);
+}
+
+#adicional{
+color: rgba(73, 106, 7, 0.572);
+}
+
+#especial{
+    color: rgba(130, 2, 107, 0.572);
+    }
+
+.ultimo{
+    color: #057a0b;
+}
+caption{
+    visibility: hidden;
+}
