@@ -1,0 +1,51 @@
+body {
+    background-image: url(cuadros.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.encabezado {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.caja {
+    background-color: rgba(0, 0, 0, 0.688);
+    text-align: center;
+    border-radius: 10%;
+    padding: 2%;
+    width: 20%;
+}
+
+.formulario {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    color: white;
+    text-align: center;
+}
+
+input, select, label, button {
+    margin-bottom: 10px;
+    
+}
+
+#diametro {
+    text-align: center;
+}
+
