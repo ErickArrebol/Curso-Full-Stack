@@ -1,0 +1,1 @@
+//Crea una funcion que permita eliminar una cookie dada su nombre 

@@ -6,10 +6,8 @@ const calcularButton = document.getElementById('calcular');
 
 // Agrega un evento al botón de calcular
 calcularButton.addEventListener('click', () => {
-    // Obtiene el valor del diámetro ingresado por el usuario
-    const diametro = parseInt(diametroInput.value);
     // Muestra el resultado en el elemento de resultado
-    resultadoLabel.textContent = `El radio es: ${diametro/2}`;
+    resultadoLabel.textContent = `El radio es: ${diametroInput.value/2}`;
 });
 
 

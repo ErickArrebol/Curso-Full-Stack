@@ -1,0 +1,2 @@
+// Crea un pagina que permita  elegir entre mopdo oscuro y modo claro, utiliza Cookies  para recordar
+// la preferencia del usuario y aplica el estilo correspondiente cuando el usuario regrese a la pagina

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 Extra Lista de tareas</title>
+    <link rel="stylesheet" href="Eje. 7 Estilo.css">
+</head>
+
+<body>
+
+    <div id="encabezado">
+        <header>
+            Crea una aplicación de lista de tareas (To-Do list) que permita agregar, editar y eliminar tareas utilizando
+            objetos y manipulación del DOM.
+        </header>
+    </div>
+    <div class="contenedor">
+        <h1>Lista de Tareas</h1>
+        <input type="text" id="tarea" placeholder="Nueva tarea" name="Nueva tarea " data-index="">
+        <button class="boton-uno" id="botonAgregar" type="button" name="agregar">
+            <div class="icono">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                </svg>
+            </div>
+            <span>Agregar</span><br>
+        </button>
+        <ul id="listaDeTareas"></ul>
+    </div>
+    <div id="pieDePagina">
+        <footer>
+            Pie de página
+        </footer>
+    </div>
+
+    <script src="Eje. 7 Codigo.js"></script>
+</body>
+
+</html>
+
+
